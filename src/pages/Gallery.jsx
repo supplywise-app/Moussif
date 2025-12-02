@@ -5,6 +5,7 @@ import './Gallery.css';
 
 const Gallery = () => {
     const [selectedCategory, setSelectedCategory] = React.useState(null);
+    const [selectedImage, setSelectedImage] = React.useState(null);
 
     return (
         <div className="container section">
@@ -61,6 +62,7 @@ const Gallery = () => {
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ delay: index * 0.1 }}
+                                    onClick={() => setSelectedImage(item)}
                                 >
                                     {item.src ? (
                                         <img
@@ -75,6 +77,17 @@ const Gallery = () => {
                                     )}
                                 </motion.div>
                             ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Lightbox Modal */}
+            {selectedImage && (
+                <div className="lightbox-overlay" onClick={() => setSelectedImage(null)}>
+                    <div className="lightbox-content" onClick={e => e.stopPropagation()}>
+                        <button className="lightbox-close" onClick={() => setSelectedImage(null)}>×</button>
+                        <img src={selectedImage.src} alt={selectedImage.alt} />
+                        <p className="lightbox-caption">{selectedImage.alt}</p>
                     </div>
                 </div>
             )}
