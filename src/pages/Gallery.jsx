@@ -32,13 +32,7 @@ const Gallery = () => {
                                 onClick={() => setSelectedCategory(category)}
                             >
                                 <div className="category-image-container">
-                                    {image.src && (
-                                        <img
-                                            src={image.src}
-                                            alt={image.alt}
-                                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                        />
-                                    )}
+                                    <div style={{ width: '100%', height: '100%', background: 'linear-gradient(45deg, #222, #333)' }}></div>
                                     <div className="category-overlay">
                                         <h3>{category}</h3>
                                     </div>
