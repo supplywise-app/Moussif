@@ -1,0 +1,19 @@
+{
+  "name": "Le Moussif",
+  "shortName": "Le Moussif",
+  "tagline": "Atelier privé à Quimper (29)",
+  "address": {
+    "street": "Atelier Privé",
+    "city": "Quimper",
+    "zip": "29000",
+    "country": "France"
+  },
+  "contact": {
+    "phone": "",
+    "email": "lemoussiftattoo@gmail.com",
+    "instagram": "https://instagram.com/lemoussifttt"
+  },
+  "hours": [
+    "Sur Rendez-vous uniquement"
+  ]
+}

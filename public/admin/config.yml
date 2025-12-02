@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/gallery"
+public_folder: "/images/gallery"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "gallery"
+        label: "Galerie"
+        file: "src/data/gallery.json"
+        fields:
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            fields:
+              - {label: "Image", name: "src", widget: "image"}
+              - {label: "Description (Alt)", name: "alt", widget: "string"}
+              - {label: "Catégorie", name: "category", widget: "select", options: ["Flashs dispos", "Réalisations"]}
+              - {label: "ID Unique", name: "id", widget: "uuid"}

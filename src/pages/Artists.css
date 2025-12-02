@@ -1,0 +1,58 @@
+.artists-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.artist-card {
+    display: flex;
+    gap: var(--spacing-lg);
+    background-color: var(--color-bg-alt);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    align-items: center;
+}
+
+.artist-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.artist-image {
+    flex: 0 0 300px;
+    height: 300px;
+    background-color: #333;
+}
+
+.artist-info {
+    flex: 1;
+}
+
+.artist-info h3 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.specialty {
+    color: var(--color-accent);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.bio {
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+
+    .artist-card,
+    .artist-card:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .artist-image {
+        flex: 0 0 250px;
+        width: 100%;
+    }
+}

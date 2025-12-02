@@ -1,0 +1,28 @@
+{
+    "images": [
+        {
+            "id": 1,
+            "src": "/images/gallery/tattoo1.jpg",
+            "alt": "Old School Rose",
+            "category": "Flashs dispos"
+        },
+        {
+            "id": 2,
+            "src": "/images/gallery/tattoo2.jpg",
+            "alt": "Blackwork Dagger",
+            "category": "Réalisations"
+        },
+        {
+            "id": 3,
+            "src": "/images/gallery/tattoo3.jpg",
+            "alt": "Traditional Eagle",
+            "category": "Flashs dispos"
+        },
+        {
+            "id": 4,
+            "src": "/images/gallery/tattoo4.jpg",
+            "alt": "Skull and Snake",
+            "category": "Réalisations"
+        }
+    ]
+}
