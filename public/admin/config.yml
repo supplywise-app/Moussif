@@ -16,6 +16,8 @@ collections:
           - label: "Images"
             name: "images"
             widget: "list"
+            min: 2
+            summary: "{{fields.alt}} - {{fields.category}}"
             fields:
               - {label: "Image", name: "src", widget: "image"}
               - {label: "Description (Alt)", name: "alt", widget: "string"}

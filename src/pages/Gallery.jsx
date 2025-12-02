@@ -32,8 +32,13 @@ const Gallery = () => {
                                 onClick={() => setSelectedCategory(category)}
                             >
                                 <div className="category-image-container">
-                                    {/* Placeholder background since we don't have real images yet */}
-                                    <div style={{ width: '100%', height: '100%', background: 'linear-gradient(45deg, #222, #333)' }}></div>
+                                    {image.src && (
+                                        <img
+                                            src={image.src}
+                                            alt={image.alt}
+                                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                        />
+                                    )}
                                     <div className="category-overlay">
                                         <h3>{category}</h3>
                                     </div>
@@ -63,10 +68,17 @@ const Gallery = () => {
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ delay: index * 0.1 }}
                                 >
-                                    <div className="image-placeholder">
-                                        {/* In a real app, use <img src={item.src} alt={item.alt} /> */}
-                                        <span>{item.alt}</span>
-                                    </div>
+                                    {item.src ? (
+                                        <img
+                                            src={item.src}
+                                            alt={item.alt}
+                                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                        />
+                                    ) : (
+                                        <div className="image-placeholder">
+                                            <span>{item.alt}</span>
+                                        </div>
+                                    )}
                                 </motion.div>
                             ))}
                     </div>
